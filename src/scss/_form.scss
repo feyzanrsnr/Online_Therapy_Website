@@ -1,0 +1,116 @@
+.formContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height:100vh;
+   
+
+    @media(max-width: 768px){
+        font-size: $font-size-base;
+    }
+}
+
+.mainForm{
+    display: flex;
+    gap: 100px;
+    width: 80%;
+    margin-top: 50px;
+   
+
+    @media(max-width: 768px){
+        flex-direction: column;
+        width: 90%;
+        gap: 30px;
+    }
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+     @media(max-width: 768px){
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.form > input, textarea {
+    background-color: transparent;
+    border-bottom: 1px solid $brown;
+    margin-bottom: 20px;
+    resize: none;
+
+    &:focus{
+        background-color: transparent;
+        outline: none;
+        
+    }
+}
+
+.form > label{
+    color: $brown;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+
+.select-input{
+    background-color: transparent;
+    border: 1px solid $gray;
+    color: $brown;
+    font-size: $font-size-base;
+    padding: 10px 5px;
+    width: 70%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+    width: 100%;  
+  }
+ 
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+
+.date-input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 250px;
+  margin-bottom: 15px;
+
+   @media (max-width: 768px) {
+    max-width: 100%; 
+  }
+  
+}
+
+
+.date-input-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: transparent;
+  color: $brown;
+  font-size: $font-size-base;
+  cursor: pointer;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 10px;
+  color: #666;
+  pointer-events: none;
+  
+}

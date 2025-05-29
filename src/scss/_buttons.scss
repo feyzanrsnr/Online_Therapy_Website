@@ -1,0 +1,64 @@
+// styles/_buttons.scss
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem; //md
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+   font-family: $font-primary;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+}
+
+.button-sm {
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem; // 14px
+}
+
+.button-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem; // 18px
+}
+
+
+// Buton renk varyantları
+.button-primary {
+  background-color: $earth-yellow;
+  color: $pakistan-green;
+
+  &:hover {
+    background-color: darken($earth-yellow, 10%);
+  }
+}
+
+.button-secondary {
+  background-color: $dark-moss-green;
+  color: $cornsilk;
+
+  &:hover {
+    background-color: lighten($dark-moss-green, 10%);
+  }
+}
+
+.button-outline {
+  background-color: transparent;
+  border: 2px solid $tigers-eye;
+  color: $tigers-eye;
+
+  &:hover {
+    background-color: $tigers-eye;
+    color: $cornsilk;
+  }
+}
