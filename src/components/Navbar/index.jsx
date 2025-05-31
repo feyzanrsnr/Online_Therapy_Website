@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router'
 import { Link as ScrollLink } from 'react-scroll';
 import { FaInstagram } from 'react-icons/fa'
+import Sidebar from '../../components/Sidebar'
+
 
 
 function index() {
   return (
+    <>
     <nav className='navbar'>
         <div className='navbar-left'>
           <Link to='/' className='button button-secondary'>Anasayfa</Link>
@@ -17,7 +20,10 @@ function index() {
           <Link className='button button-outline'>Bana Uygun Destek Türünü Bul</Link>
           <ScrollLink to='question' className='button button-outline'>Soru Sor</ScrollLink>
         </div>
+        
     </nav>
+  
+    </>
   )
 }
 

@@ -21,7 +21,7 @@ function index() {
             </div>
             </Link>
 
-            <Link to="">
+            <ScrollLink to="question">
             <div className='options-card' >
                 
                     <img className='options-card-image' src={icon2}  alt="icon" />
@@ -30,9 +30,9 @@ function index() {
                 </p>
                 
             </div>
-            </Link>
+            </ScrollLink>
 
-            <ScrollLink to='' smooth={true} duration={500}>
+            <Link to='' smooth={true} duration={500}>
             <div className='options-card' >
                 
                     <img className='options-card-image' src={icon3} alt="icon" />
@@ -41,7 +41,7 @@ function index() {
                 </p>
                 
             </div>
-            </ScrollLink>
+            </Link>
 
             <Link to="/">
             <div className='options-card' >
@@ -54,7 +54,7 @@ function index() {
             </div>
             </Link>
 
-            <Link to="/">
+            <ScrollLink to="faqs">
             <div className='options-card' >
                 
                 <img className='options-card-image' src={icon5} alt="icon" />
@@ -63,7 +63,7 @@ function index() {
                 </p>
                 
             </div>
-            </Link>
+            </ScrollLink>
         </div>
     </section>
   )
