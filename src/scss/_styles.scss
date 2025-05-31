@@ -7,14 +7,12 @@
     justify-content: center;
     flex-direction: column;
 
-
-
 }
 
 h3{
     font-family: $font-heading-two;
     font-size: $font-size-xl;
-    color: $brown;
+    color:$earth-brown;
 
     @media(max-width: 768px){
         font-size: $font-size-lg;
@@ -26,8 +24,8 @@ h3{
 /* HOME */
 
 .home{
-    // background-color: aqua;
-
+    background-color: $white;
+    margin: 0;
     &-image{
         height: 100vh;
         width: 100vw;
@@ -79,6 +77,8 @@ h3{
 
         &-title{
             font-size: $font-size-lg;
+            color: $earth-brown;
+            font-weight: bold;
         }
 
         &-image{
@@ -101,14 +101,13 @@ h3{
     height: 500px;
     width: 80%;
 
-
     &-card{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background-color: $white;
-        color: $brown;
+        color:$stone-gray;
         padding: 1.5rem;
         border-radius: 1rem;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -179,7 +178,7 @@ h3{
             padding: 30px;
             border-radius: 10px;
             height: 100%;
-            color: $brown;
+            color: $stone-gray;
 
             & div{
                 display:flex;
@@ -208,7 +207,6 @@ h3{
             & button{
                 width: 100%;
                 margin-top: 10px;
-                color: $cornsilk;
             }
         }
 
@@ -219,6 +217,12 @@ h3{
 
 
 /* FAQS */
+
+#faqs{
+    background-color: $white;
+    margin: 0;
+    padding: 0;
+}
 .main-container{
     display: flex;
     flex-direction: column;
@@ -258,7 +262,8 @@ h3{
 }
 
 .faqs-question-number{
-    color:$tigers-eye ;
+    color:$rust-orange;
+    font-size: $font-size-lg;
 }
 
 .faqs-question{
@@ -282,8 +287,8 @@ h3{
     display: flex;
     justify-content: center;
     height: 100px;
-    background-color: $dark-moss-green;
-    color: $cornsilk;
+    background-color: $sage-green;
+    color: $white;
     font-size: $font-size-base;
 
     @media(max-width: 768px){

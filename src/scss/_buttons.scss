@@ -35,30 +35,31 @@
 
 // Buton renk varyantları
 .button-primary {
-  background-color: $earth-yellow;
-  color: $pakistan-green;
+  background-color: $rust-orange;
+  color:$white;
 
   &:hover {
-    background-color: darken($earth-yellow, 10%);
+    background-color: darken($rust-orange, 10%);
+    color: $white;
   }
 }
 
 .button-secondary {
-  background-color: $dark-moss-green;
-  color: $cornsilk;
+  background-color: $sage-green;
+  color: $white;
 
   &:hover {
-    background-color: lighten($dark-moss-green, 10%);
+    background-color: lighten($sage-green, 10%);
   }
 }
 
 .button-outline {
   background-color: transparent;
-  border: 2px solid $tigers-eye;
-  color: $tigers-eye;
+  border: 2px solid $rust-orange;
+  color: $rust-orange;
 
   &:hover {
-    background-color: $tigers-eye;
-    color: $cornsilk;
+    background-color: $rust-orange;
+    color: $cream;
   }
 }

@@ -36,7 +36,7 @@
 
 .form > input, textarea {
     background-color: transparent;
-    border-bottom: 1px solid $brown;
+    border-bottom: 1px solid $earth-brown;
     margin-bottom: 20px;
     resize: none;
 
@@ -48,18 +48,16 @@
 }
 
 .form > label{
-    color: $brown;
+    color:$earth-brown;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 
-
-
 .select-input{
     background-color: transparent;
     border: 1px solid $gray;
-    color: $brown;
+    color: $earth-brown;
     font-size: $font-size-base;
     padding: 10px 5px;
     width: 70%;
@@ -100,7 +98,7 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: transparent;
-  color: $brown;
+  color: $earth-brown;
   font-size: $font-size-base;
   cursor: pointer;
 }
@@ -108,7 +106,7 @@
 .calendar-icon {
   position: absolute;
   right: 10px;
-  color: #666;
+  color: $earth-brown;
   pointer-events: none;
   
 }

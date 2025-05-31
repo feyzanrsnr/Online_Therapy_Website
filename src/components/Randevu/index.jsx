@@ -38,7 +38,7 @@ function index() {
   )
     
   return (
-    <section className='section'>
+    <section style={{backgroundColor:'#fff', margin:'0'}} className='section'>
     
     <div className='formContainer'>
 
