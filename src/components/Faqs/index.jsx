@@ -1,102 +1,93 @@
 import React from 'react'
 import { MdOutlineExpandCircleDown } from "react-icons/md";
+import { useState } from 'react';
 
 function index() {
+
+const [openIndexes, setOpenIndexes] = useState(Array(faqData.length).fill(false))
+
+const toggleFAQ = (index) => {
+  setOpenIndexes((prev) => 
+  prev.map((item, i) => (i === index ? !item : item))
+  )
+}
+
   return (
     <section id='faqs' className='section'>
       
       <h3>TERAPİ HAKKINDA DOĞRU BİLİNEN YANLIŞLAR</h3>
 
-      <div className='main-container'>
+      
+        <div className='main-container'>
 
         <div className='faqs-container'>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>01</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
+        {faqData.map((faq,index) => (
+        <div key={index} className='faqs-question-container'>
+          <h5 className='faqs-question-number'>
+            {(index + 1).toString().padStart(2,'0')}
+          </h5>
+          <div className='faqs-question' onClick={() => toggleFAQ(index)} style={{cursor:'pointer'}}>
+          <p>{faq.question}</p>
+          <MdOutlineExpandCircleDown className={`icon ${openIndexes[index] ? 'rotate' : ''}`} />
           </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>02</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>03</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>04</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>05</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>06</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>07</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>08</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>09</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        <div className='faqs-question-container'>
-          <h5 className='faqs-question-number'>10</h5>
-          <div className='faqs-question'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <MdOutlineExpandCircleDown/>
-          </div>
-        </div>
-
-        
+          {openIndexes[index] && (
+            <div className='faqs-answer'>
+              <p>{faq.answer}</p>
+            </div>
+          )}
+        </div> 
+        ))}
       </div>
       </div>
+      
+      
         
     </section>
   )
 }
 
 export default index
+
+
+const faqData = [
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+  {
+    question:"Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    answer:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, consequatur."
+  },
+]

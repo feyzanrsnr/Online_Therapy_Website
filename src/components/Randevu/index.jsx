@@ -3,6 +3,7 @@ import {Formik, Form, Field, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import DatePicker from 'react-datepicker'
 import { FaCalendarAlt } from 'react-icons/fa'
+import "react-datepicker/dist/react-datepicker.css";
 
 function index() {
     const initialValues = {
@@ -19,7 +20,11 @@ function index() {
       namesurname: Yup.string().required("Zorunlu alan"),
       phone: Yup.string().required("Zorunlu alan"),
       email: Yup.string().email("Geçersiz email").required("Zorunlu alan"),
-      date: Yup.date().required("Zorunlu alan"),
+      date: Yup.date()
+    .nullable().typeError("Zorunlu alan").transform((value, originalValue) => {
+    return originalValue === "" || originalValue === null ? null : value;
+  })
+  .required("Zorunlu alan"),
       expert: Yup.string().required("Zorunlu alan"),
       field: Yup.string().required("Zorunlu alan"),
       message: Yup.string(),
@@ -45,6 +50,8 @@ function index() {
     <Formik
     initialValues={initialValues}
     validationSchema={validationSchema}
+    validateOnBlur={true}
+    validateOnChange={true}
     >
       {({setFieldValue, values}) => (
         <Form className='mainForm'>
@@ -71,15 +78,16 @@ function index() {
              
               <DatePicker
               selected={values.date}
-              onChange={(val) => setFieldValue('date', val)}
+              onChange={(val) => {
+              setFieldTouched("date", true);
+              setFieldValue("date", val);
+              }}
+              onBlur={() => setFieldTouched("date", true)}
               dateFormat="dd/MM/yyyy"
               minDate={new Date()}
               customInput={<CustomDateInput />}
-            />
+              />
               <ErrorMessage name='date' component="div" className='error'/>
-
-              
-
               <label htmlFor="expert">Randevu Almak istediğiniz Uzman</label>
               <Field as="select" name="expert" className="select-input">
                 <option value="">Uzman Seçiniz</option>
@@ -99,8 +107,11 @@ function index() {
               </Field>
               <ErrorMessage name="field" component="div" className="error" />
 
-              <label htmlFor="message">Mesajınız</label>
-              <Field as="textarea" name="message" />
+              <label className='message-label' htmlFor="message">Mesajınız
+                <span className='star'>*</span>
+              </label>
+              
+              <Field as="textarea" name="message"/>
 
               <button className="button button-primary" type="submit">
                 Randevu Talebi Oluştur
