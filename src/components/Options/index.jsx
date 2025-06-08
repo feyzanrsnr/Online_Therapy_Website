@@ -12,7 +12,7 @@ function index() {
     <section>
       
         <div className='options'>
-            <Link to="">
+            <Link to="randevu">
             <div className='options-card' >
                     <img className='options-card-image' src={icon1}  alt="icon" />
                 <p className='options-card-title'>

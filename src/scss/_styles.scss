@@ -26,10 +26,16 @@ h3{
 .home{
     background-color: $white;
     margin: 0;
+    margin-top: 70px;
     &-image{
         height: 100vh;
         width: 100vw;
     }
+
+    @media(max-width: 768px){
+        margin-top: 0;
+    }
+
 }
 
 .home-image{
@@ -73,6 +79,7 @@ h3{
         margin: 1rem auto;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
 
         &:hover{
         transform: translateY(-5px);
@@ -119,6 +126,7 @@ h3{
         height: 100%;
         margin: 1rem auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
         
 
         &:hover{
@@ -276,6 +284,14 @@ h3{
     background-color: $white;
     margin: 0;
     padding: 0;
+    
+    @media(max-width: 768px){
+       h3{
+        width: 70%;
+        margin-top: 20px;
+       }
+    }
+    
 }
 
 .main-container{
@@ -296,26 +312,27 @@ h3{
     gap: 30px 50px;
     justify-content: space-between;
     width: 100%;
-
+    
     @media(max-width: 768px){
         flex-wrap: nowrap;
         flex-direction: column;
         min-height: 100vh;
         margin-bottom: 100px;
+        padding: 20px;
     }
+
 }
 
 .faqs-question-container{
     display: block;
-    width: calc(50% - 25px); // gap/2 kadar çıkar
+    width: calc(50% - 25px);
     padding: 10px 0 20px 0;
     border-bottom: 1px solid black;
     box-sizing: border-box;
-    
+
     @media(max-width: 768px){
         width: 100%;
     }
-   
 }
 
 .faqs-question-number{
@@ -329,43 +346,19 @@ h3{
     justify-content: space-between;
     color: $earth-brown;
     font-weight: 500;
+    
 }
 
-.faqs-answer {
-  padding-top: 1rem;
-  padding-left: .5rem;
-  color: #333;
-  font-size: 1.1rem;
-  overflow: hidden;
-  animation: fadeIn 0.3s ease-in-out;
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.4s ease;
+.faqs-answer{
+    color: #333;
+    font-size: 1.1rem;
+    padding-top: .5rem;
+    padding-left: .3rem;
+    width: 85%;
 }
 
-.faqs-question-container.open .faqs-answer {
-  max-height: 100px;
-  opacity: 1;
-  padding: 0.5rem 1rem;
-}
-
-
-@keyframes fadeIn {
-  from { opacity: 0; max-height: 0; }
-  to { opacity: 1; max-height: 100px; }
-}
-
-.icon {
-  transition: transform 0.3s ease;
-}
-
-.icon.rotate {
-  transform: rotate(180deg);
-}
 
 /* -------------------------- */
-
-
 
 
 
@@ -395,5 +388,26 @@ h3{
     }
     }
 }
+
+/* -------------------------- */
+
+/* EXPERT */
+
+.expert-container{
+    display: flex;
+    gap: 2rem;
+
+    &-image{
+        width: 30%;
+    }
+
+    &-text{
+       width: 60%;
+    }
+
+}
+
+
+
 
 /* -------------------------- */
