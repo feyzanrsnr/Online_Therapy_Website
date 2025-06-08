@@ -12,7 +12,7 @@ function index() {
     <nav className='navbar'>
         <div className='navbar-left'>
           <Link to='/' className='button button-secondary'>Anasayfa</Link>
-          <Link className='button'><FaInstagram size={30} color='#3E3E3E'/></Link>
+          <Link className='button'><FaInstagram size={30} color='#F5F1E6'/></Link>
         </div>
         <div className='navbar-right'>
           <Link to='/randevu' className='button button-outline'>Randevu Al</Link>

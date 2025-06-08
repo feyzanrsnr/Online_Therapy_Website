@@ -1,10 +1,10 @@
 import React from 'react'
-import image from '../../assets/images/maple-leaves-ground.jpg'
+import image from '../../assets/images/view-brain-depicted-as-fantastical-tree.jpg'
 
 function index() {
   return (
     <div className='section home'>
-        {/* <img className='home-image' src={image} alt="home-image" /> */}
+        <img className='home-image' src={image} alt="home-image" />
     </div>
   )
 }

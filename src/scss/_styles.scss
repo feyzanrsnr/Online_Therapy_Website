@@ -32,6 +32,10 @@ h3{
     }
 }
 
+.home-image{
+    width: 100%;
+    object-fit: cover;
+}
 /* ------------------------- */
 
 
@@ -115,6 +119,7 @@ h3{
         height: 100%;
         margin: 1rem auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
 
         &:hover{
         transform: translateY(-5px);
@@ -125,6 +130,51 @@ h3{
             width:100%;
             height:100%;
     }
+
+    &-expert{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+
+        &-icon{
+            width: 50%;
+            border-radius:100% ;
+            position: absolute;
+            top: 0;
+        }   
+
+        &-text{
+            margin-top: 7rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+        & > span{
+            font-size: $font-size-xl;
+            color: $earth-brown;
+            font-weight: bold;
+        }
+    
+        & > ul > li {
+            padding: .3rem;
+            color: $earth-brown;
+            font-size: $font-size-lg
+        }
+            
+        }   
+
+        
+
+       
+    }
+
+     
     }
 }
 
@@ -179,11 +229,15 @@ h3{
             border-radius: 10px;
             height: 100%;
             color: $stone-gray;
-
             & div{
                 display:flex;
                 flex-direction: column;
                 margin-bottom: 15px;
+
+                & > label{
+                    color: $earth-brown;
+                    font-weight: 500;
+                }
 
                 & > input{
                     width: 100%;
@@ -223,6 +277,7 @@ h3{
     margin: 0;
     padding: 0;
 }
+
 .main-container{
     display: flex;
     flex-direction: column;
@@ -237,7 +292,7 @@ h3{
 .faqs-container{
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 30px 50px;
     justify-content: space-between;
     width: 100%;
@@ -251,14 +306,16 @@ h3{
 }
 
 .faqs-question-container{
+    display: block;
     width: calc(50% - 25px); // gap/2 kadar çıkar
     padding: 10px 0 20px 0;
     border-bottom: 1px solid black;
     box-sizing: border-box;
-
+    
     @media(max-width: 768px){
         width: 100%;
     }
+   
 }
 
 .faqs-question-number{
@@ -270,12 +327,32 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: $earth-brown;
+    font-weight: 500;
 }
 
 .faqs-answer {
+  padding-top: 1rem;
+  padding-left: .5rem;
+  color: #333;
+  font-size: 1.1rem;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.faqs-question-container.open .faqs-answer {
+  max-height: 100px;
+  opacity: 1;
   padding: 0.5rem 1rem;
-  color: #555;
-  font-size: 0.9rem;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 100px; }
 }
 
 .icon {
