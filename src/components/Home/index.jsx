@@ -4,7 +4,7 @@ import image from '../../assets/images/view-brain-depicted-as-fantastical-tree.j
 function index() {
   return (
     <div className='section home'>
-        <img className='home-image' src={image} alt="home-image" />
+        {/* <img className='home-image' src={image} alt="home-image" /> */}
     </div>
   )
 }

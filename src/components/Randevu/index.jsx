@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {Formik, Form, Field, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import DatePicker from 'react-datepicker'
 import { FaCalendarAlt } from 'react-icons/fa'
 import "react-datepicker/dist/react-datepicker.css";
+import emailjs from '@emailjs/browser'
 
 function index() {
     const initialValues = {
@@ -41,6 +42,27 @@ function index() {
       <FaCalendarAlt className="calendar-icon" />
     </div>
   )
+
+  const form = useRef()
+  
+      const sendEmail = (e) => {
+          e.preventDefault()
+          emailjs
+          .sendForm('service_bnjbar4', 'template_lqc2p4a', form.current, {
+          publicKey: 'z4YSe-3ipDja0QQpo',
+      })
+        .then(
+        () => {
+          console.log('SUCCESS!');
+          alert('Randevu talebiniz başarıyla oluşturuldu')
+          e.target.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Bir hata oluştu')
+        },
+      );}
+  
     
   return (
     <section style={{backgroundColor:'#fff', margin:'0'}} className='section'>
@@ -54,7 +76,7 @@ function index() {
     validateOnChange={true}
     >
       {({setFieldValue, values}) => (
-        <Form className='mainForm'>
+        <Form ref={form} onSubmit={sendEmail} className='mainForm'>
         <div className="form">
           <h3 style= {{marginBottom:'50px', textDecoration:'underline'}} >Kişisel Bilgiler</h3>
 
@@ -63,7 +85,7 @@ function index() {
               <ErrorMessage name="namesurname" component="div" className="error" />
 
               <label htmlFor="phone">Telefon Numarası</label>
-              <Field name="phone" type="text" />
+              <Field name="phone" type="text" placeholder='5xx xxx xx xx'/>
               <ErrorMessage name="phone" component="div" className="error" />
 
               <label htmlFor="email">Email Adresiniz</label>

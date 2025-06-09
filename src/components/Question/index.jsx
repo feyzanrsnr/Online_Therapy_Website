@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import image from '../../assets/images/image 2.png'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
+
 function index() {
    
-  const initialValues = {
+    const initialValues = {
     namesurname: "",
     email:"",
     question:"",
@@ -17,6 +18,7 @@ function index() {
       email: Yup.string().email("Geçersiz email adresi").required("Zorunlu alan"),
       question: Yup.string().required("Zorunlu alan")
     })
+  
 
   return (
     <section id='question' className='section'>
@@ -60,7 +62,7 @@ function index() {
                </div>
 
                 <div>
-                 <label htmlFor="question">Sorunuz</label>
+                <label htmlFor="question">Sorunuz</label>
                 <Field name="question" as="textarea" />
                 <ErrorMessage name='question' component="div"
                 className='error'
