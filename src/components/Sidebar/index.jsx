@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 function index() {
     const [isOpen, setIsOpen] = useState(false)
+
     return (
     <>
    <button className='open-button' onClick={() => setIsOpen(true)}><GiHamburgerMenu/></button>
@@ -15,7 +16,9 @@ function index() {
     <div className='sidebar'>
 
     <div className='sidebar-container'>
-    <button className='close-button' onClick={() => setIsOpen(false)}><IoClose size={30}/></button>
+
+    <button className='close-button' onClick={() => setIsOpen(false)}><IoClose size={30}/>
+    </button>
 
     <div className='sidebar-links'>
     
@@ -42,7 +45,6 @@ function index() {
 
     </div>
      
-        
     
     </div>
     </div>}
