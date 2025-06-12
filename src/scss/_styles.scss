@@ -29,9 +29,15 @@ h3{
     background-color: $white;
     margin: 0;
     position: relative;
+    background-image: url('../assets/images/ChatGPT\ Image\ 12\ Haz\ 2025\ 03_28_35.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @media(max-width: 768px){
-        margin-top: 0;
+        background-image: url('../assets/images/ChatGPT\ Image\ 12\ Haz\ 2025\ 03_28_35\ \(1\).png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
     }
 
     &-text{
@@ -339,6 +345,7 @@ h3{
        h3{
         width: 100%;
         margin-top: 1rem;
+        font-size:$font-size-lg;
        }
     }
     
@@ -423,10 +430,6 @@ h3{
     background-color: $text-color;
     color: $white;
     font-size: $font-size-base;
-
-    @media (max-width: 768px){
-       font-size: 1.2rem;
-    }
 
     & > p{
         position: absolute;

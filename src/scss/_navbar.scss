@@ -36,7 +36,7 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    width: 50%;
+    width: 80%;
     background-color: $background;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     color: $text-color;
@@ -80,7 +80,7 @@
 
 .open-button{
     position: fixed;
-    top: 15px;
+    top: 0px;
     left: 15px;
     color: $text-color;
     display: none;
