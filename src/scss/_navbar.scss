@@ -23,6 +23,30 @@
     }
 }
 
+.navbar-scrolled{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-base;
+    background-color: $white;
+    padding: $space-lg $space-lg;
+    // margin-top: .7rem;
+    width: 100%;
+    max-width: 100vw;    
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    &-container{
+        display: flex;
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+}
 
 /* SIDEBAR */
 

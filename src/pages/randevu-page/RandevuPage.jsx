@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Randevu from '../../components/Randevu'
 import Sidebar from '../../components/Sidebar'
+import Faqs from '../../components/Faqs'
 
 function RandevuPage() {
   return (
@@ -10,6 +11,7 @@ function RandevuPage() {
     <Navbar/>
     <Sidebar/>
     <Randevu/>
+    <Faqs/>
     <Footer/>
     </>
   )

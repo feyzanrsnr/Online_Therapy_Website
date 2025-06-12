@@ -75,8 +75,11 @@ function index() {
     validateOnBlur={true}
     validateOnChange={true}
     >
-      {({setFieldValue, values}) => (
-        <Form ref={form} onSubmit={sendEmail} className='mainForm'>
+      {({setFieldValue,  setFieldTouched, values}) => (
+        <Form 
+        ref={form} 
+        onSubmit={sendEmail} 
+        className='mainForm'>
         <div className="form">
           <h3 style= {{marginBottom:'50px', textDecoration:'underline'}} >Kişisel Bilgiler</h3>
 
@@ -110,6 +113,7 @@ function index() {
               customInput={<CustomDateInput />}
               />
               <ErrorMessage name='date' component="div" className='error'/>
+              
               <label htmlFor="expert">Randevu Almak istediğiniz Uzman</label>
               <Field as="select" name="expert" className="select-input">
                 <option value="">Uzman Seçiniz</option>
