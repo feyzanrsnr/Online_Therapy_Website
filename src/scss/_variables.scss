@@ -21,44 +21,15 @@ $font-size-lg:1.25rem;
 $font-size-xl:2rem;
 $font-size-xxl:2.25rem;
 
-// $dark-moss-green: #606c38ff;
-// $dark-moss-green:#6B705C;
-// $pakistan-green: #283618ff;
-// $cornsilk: #fefae0ff;
-// $warm-grey:#f7f3ef;
-// $cream: #F2E9DC;
-// $brown:#3E3E3E;
-// $earth-yellow: #dda15eff;
-// $tigers-eye: #bc6c25ff;
 
 $gray:#D3D0CB;
 $white:#fff;
 $black:#000;
-$cream: #fefae0ff;
-$canvas-beige:#F5F1E6;//arka plan
-$sage-green:#9CAF88;//Başlık, ikonlar, vurgu
-$earth-brown:#5F574F;//Metin, detay çizgiler
-$rust-orange:#D08249;//CTA butonları, vurgular
-$soft-amber:#F0B478;//Hover renkleri, ikonlar
-$stone-gray:#CCC5B9;//Kart zeminleri, borderlar
+$text-color:#333333; // #333333 #bd9a5f
+$title-color: #bd9a5f;
+$background:#f3ebe6; // #fffefa #f3ebe6 #F9F9F9
+$primary:#bd9a5f; // #bd9a5f #D08249
 
-// $sage-green:#A8C3A0; //	
-// $muted-olive:#6C8B5E;	//footer
-// $soft-apricot:#F4B393;
-// $warm-clay:#D98E73;	
-// $ivory-white:#FDFCF9;//ana arka plan
-// $stone-gray:#4F4F4F;
-
-/* SCSS Gradient */
-$gradient-top: linear-gradient(0deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
-$gradient-right: linear-gradient(90deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
-$gradient-bottom: linear-gradient(180deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
-$gradient-left: linear-gradient(270deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
-$gradient-top-right: linear-gradient(45deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
-$gradient-bottom-right: linear-gradient(135deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
-$gradient-top-left: linear-gradient(225deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
-$gradient-bottom-left: linear-gradient(315deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
-$gradient-radial: radial-gradient(#606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
 
 /*SPACING*/
 $space-xs: 0.25rem; 

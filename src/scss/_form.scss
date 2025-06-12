@@ -36,7 +36,7 @@
 
 .form > input {
     background-color: transparent;
-    border-bottom: 1px solid $earth-brown;
+    border-bottom: 1px solid $text-color;
     margin-bottom: 20px;
    
 
@@ -49,7 +49,7 @@
 
 .form > textarea{
     background-color: transparent;
-    border-bottom: 1px solid $earth-brown;
+    border-bottom: 1px solid $text-color;
     margin-bottom: 20px;
     resize: none;
 
@@ -70,7 +70,7 @@
 }
 
 .form > label{
-    color:$earth-brown;
+    color:$text-color;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -81,7 +81,7 @@
 
 .star{
   margin-left: 5px;
-    color: $rust-orange;
+    color: $primary;
     cursor: pointer;
     position: relative;
 }
@@ -104,7 +104,7 @@
 .select-input{
     background-color: transparent;
     border: 1px solid $gray;
-    color: $earth-brown;
+    color: $text-color;
     font-size: $font-size-base;
     padding: 10px 5px;
     width: 70%;
@@ -145,7 +145,7 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: transparent;
-  color: $earth-brown;
+  color: $text-color;
   font-size: $font-size-base;
   cursor: pointer;
 }
@@ -153,7 +153,7 @@
 .calendar-icon {
   position: absolute;
   right: 10px;
-  color: $earth-brown;
+  color: $text-color;
   pointer-events: none;
   
 }

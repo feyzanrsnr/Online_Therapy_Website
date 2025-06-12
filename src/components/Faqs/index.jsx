@@ -14,7 +14,7 @@ function index() {
   return (
     <section id='faqs' className='section'>
       
-      <h3>TERAPİ HAKKINDA DOĞRU BİLİNEN YANLIŞLAR</h3>
+      <h3>Terapi Hakkında Doğru Bilinen Yanlışlar</h3>
         <div className="main-container">
           <div className="faqs-container">
                 {faqData.map((faq,i) => (

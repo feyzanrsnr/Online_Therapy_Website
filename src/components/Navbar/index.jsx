@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import { Link } from 'react-router'
 import { Link as ScrollLink } from 'react-scroll';
 import { FaInstagram } from 'react-icons/fa'
-import Sidebar from '../../components/Sidebar'
 
 
 
@@ -10,16 +9,14 @@ function index() {
   return (
     <>
     <nav className='navbar'>
-        <div className='navbar-left'>
-          <Link to='/' className='button button-secondary'>Anasayfa</Link>
-          <Link className='button'><FaInstagram size={30} color='#333'/></Link>
-        </div>
-        <div className='navbar-right'>
-          <Link to='/randevu' className='button button-outline'>Randevu Al</Link>
-          <Link className='button button-outline'>Uzmanımı Bul</Link>
-          <Link className='button button-outline'>Bana Uygun Destek Türünü Bul</Link>
-          <ScrollLink to='question' className='button button-outline'>Soru Sor</ScrollLink>
-        </div>
+          <div className='navbar-container'>
+                <Link to='/'><button className='button button-oval'>Anasayfa</button></Link>
+                <Link to='/randevu'><button className='button button-oval'>Randevu Al</button></Link>
+                <Link><button className='button button-oval'>Uzmanımı Bul</button></Link>
+                <Link><button className='button button-oval'>Bana Uygun Destek Türünü Bul</button></Link>
+                <ScrollLink><button className='button button-oval'>Soru Sor</button></ScrollLink>
+          </div>
+        
         
     </nav>
   

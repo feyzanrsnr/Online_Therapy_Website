@@ -1,6 +1,5 @@
 import React from 'react'
 import image from '../../assets/images/mid-shot-woman-therapist-with-clipboard.jpg'
-import { FaStar } from "react-icons/fa";
 import { useNavigate } from 'react-router';
 
 function index() {
@@ -11,31 +10,19 @@ function index() {
   }
   return (
     <section className='section'>
-        <h3 style= {{marginBottom:'50px'}} >UZMANLARIMIZ</h3>
-        <div className='experts'>
-            <div className="experts-card" onClick={handleClick}>
-                <div className='experts-card-expert'> 
-                <img src={image} alt="avatar" className='experts-card-expert-icon'/>
-               <div className="experts-card-expert-text">
-                 <span>Süeda İnan</span>
-                <ul>
-                  <li>
-                    <FaStar style={{ marginRight: '8px' , color:'#F0B478' }} />
-                    Aile Danışmanlığı</li>
-                  <li>
-                    <FaStar style={{ marginRight: '8px' , color:'#F0B478' }} />
-                    Manevi Danışmanlık</li>
-                  <li>
-                    <FaStar style={{ marginRight: '8px' , color:'#F0B478'}} />
-                    Kariyer Danışmanlığı</li>
-                    <li>
-                    <FaStar style={{ marginRight: '8px' , color:'#F0B478'}} />
-                    Bireysel Danışmanlık</li>
-                </ul>
-               </div>
-
-                </div>
-            </div>
+        <h3>Uzmanlarımız</h3>
+        <div className="experts-card">
+          <img src={image} alt="avatar"/>
+          <div className="experts-card-text">
+            <p>Süeda İnan</p>
+          <ul>
+            <li>Manevi Danışmanlık</li>
+            <li>Bireysel Danışmanlık</li>
+            <li>Kariyer Danışmanlığı</li>
+            <li>Aile Danışmanlığı</li>
+          </ul>
+          </div>
+          <button className='button button-primary' onClick={handleClick}>Özgeçmiş</button>
         </div>
     </section>
   )

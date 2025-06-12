@@ -10,7 +10,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   // text-align: center;
-   font-family: $font-primary;
+  font-family: $font-primary;
 
   &:hover {
     transform: translateY(-2px);
@@ -22,44 +22,56 @@
   }
 }
 
-.button-sm {
-  padding: 0.4rem 1rem;
-  font-size: 0.875rem; // 14px
-}
+// .button-sm {
+//   padding: 0.4rem 1rem;
+//   font-size: 0.875rem; // 14px
+// }
 
-.button-lg {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.125rem; // 18px
-}
+// .button-lg {
+//   padding: 0.75rem 1.5rem;
+//   font-size: 1.125rem; // 18px
+// }
 
 
 // Buton renk varyantları
 .button-primary {
-  background-color: $rust-orange;
+  background-color: $primary;
   color:$white;
 
   &:hover {
-    background-color: darken($rust-orange, 10%);
+    background-color: darken($primary, 10%);
     color: $white;
   }
 }
 
-.button-secondary {
-  background-color: $sage-green;
-  color: $white;
+// .button-secondary {
+//   background-color: $secondary;
+//   color: $white;
 
-  &:hover {
-    background-color: lighten($sage-green, 10%);
-  }
-}
+//   &:hover {
+//     background-color: lighten($secondary, 10%);
+//   }
+// }
 
 .button-outline {
   background-color: transparent;
-  border: 2px solid $rust-orange;
-  color: $rust-orange;
+  border: 2px solid $primary;
+  color: $white;
 
   &:hover {
-    background-color: $rust-orange;
-    color: $cream;
+    background-color: $primary;
+    color: $white;
   }
+}
+
+.button-oval{
+  background-color: $primary;
+  color: $white;
+  border-radius: 5rem;
+
+   &:hover {
+    background-color: transparent;
+    color: $text-color;
+  }
+
 }

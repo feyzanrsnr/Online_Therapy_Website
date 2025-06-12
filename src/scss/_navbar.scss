@@ -1,31 +1,22 @@
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-size: $font-size-base;
-    background-color: $white;
+    background-color: transparent;
     padding: $space-sm $space-lg;
+    margin-top: .7rem;
     width: 100%;
     max-width: 100vw;    
     position: fixed;
     top: 0;
     z-index: 1;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    
-    &-left{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: $space-lg;
-    }
+    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-    &-right{
+    &-container{
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: $space-xl;
+        gap: 1rem;
     }
-
 
     @media (max-width: 768px) {
       display: none;
@@ -46,10 +37,10 @@
     flex-direction: column;
     height: 100vh;
     width: 50%;
-    background-color: $canvas-beige;
+    background-color: $background;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-    color: $sage-green;
-    text-decoration: underline;
+    color: $text-color;
+    
     font-weight: bold;
     position: fixed;
     top: 0;
@@ -92,7 +83,7 @@
     position: fixed;
     top: 15px;
     left: 15px;
-    color: $sage-green;
+    color: $text-color;
     display: none;
     @media (max-width: 768px) {
         display: flex;
@@ -103,6 +94,6 @@
     position: absolute;
     top: 5px;
     right: 0; 
-    color:$sage-green;       
+    color:$text-color;       
 }
 /* ------------------------ */

@@ -43,10 +43,7 @@ function index() {
     </div>
      
         
-    <div className='sidebar-icon'>
-        <FaInstagram 
-      size={35} />
-    </div>
+    
     </div>
     </div>}
 

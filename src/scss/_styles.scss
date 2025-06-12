@@ -1,23 +1,25 @@
 .section{
     min-height: 100vh;
-    margin: $space-md $space-lg;
+    margin: auto $space-lg;
     font-size: $font-size-lg;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 h3{
     font-family: $font-heading-two;
     font-size: $font-size-xl;
-    color:$earth-brown;
+    color:$primary;
+    font-weight: 600;
+    text-align: center;
 
     @media(max-width: 768px){
-        font-size: $font-size-lg;
         text-align: center;
     }
+
+
 
 }
 
@@ -26,24 +28,144 @@ h3{
 .home{
     background-color: $white;
     margin: 0;
-    margin-top: 70px;
-    &-image{
-        height: 100vh;
-        width: 100vw;
-    }
+    position: relative;
 
     @media(max-width: 768px){
         margin-top: 0;
     }
 
+    &-text{
+        font-family: $font-heading-one;
+        color:$white;
+        position: absolute;
+        top: 60%;
+        font-size:3rem;
+    }
+
 }
 
-.home-image{
-    width: 100%;
-    object-fit: cover;
-}
 /* ------------------------- */
 
+
+
+
+/* HİZMETLER */
+
+#hizmetler {
+ margin: $space-lg $space-lg;
+ margin-bottom:3rem;
+}
+
+.hizmetler{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    
+    @media(max-width: 768px){
+        flex-wrap: wrap;
+    }
+
+     @media(max-width: 1350px){
+        flex-wrap: wrap;
+    }
+
+
+    &-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: $space-md;
+        background-color: $white;
+        background-image: url('../assets/images/2148759093.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: .75;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 5px 3px 5px 3px;
+        width: 350px;
+        height: 210px;
+        margin: 1rem auto;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+
+        &:hover{
+        transform: translateY(-5px);
+        // box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        opacity: .9;
+        }
+
+        &-title{
+            font-size: $font-size-lg;
+            color: $white;
+            font-weight: bold;
+        }
+    }
+}
+
+/* -------------------------- */
+
+
+/* EXPERTS */
+
+.experts-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    color:$text-color;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin-top: 2rem;
+        
+        &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+         @media(max-width: 768px){
+            width:100%;
+            height:100%;
+        }
+
+    & > img{
+        width: 50%;
+        border-radius: 100%;
+    }
+
+    &-text{
+        line-height: 2rem;
+
+        & > p{
+            margin-bottom: 1.5rem;
+            font-size: 1.7rem;
+            font-family: $font-heading-two;
+            font-weight: 500;
+           
+        }
+
+        & > ul {
+            font-weight: 400;
+        }
+    }
+        
+    }
+
+
+
+/* -------------------------- */
 
 /* OPTIONS */
 .options{
@@ -52,7 +174,8 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 100px auto;
+    margin: 5rem auto;
+   
     @media(max-width: 768px){
         flex-wrap: wrap;
     }
@@ -70,13 +193,11 @@ h3{
         text-align: center;
         gap: $space-md;
         background-color: $white;
-        padding: 1.5rem;
+        padding: 1.7rem;
         border-radius: 1rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        width: 230px;
-        // max-width: 350px;
-        height: 230px;
-        margin: 1rem auto;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 210px;
+        height: 210px;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
@@ -84,111 +205,26 @@ h3{
         &:hover{
         transform: translateY(-5px);
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        text-decoration: underline;
+       
         }
 
         &-title{
             font-size: $font-size-lg;
-            color: $earth-brown;
+            color: $text-color;
             font-weight: bold;
+            cursor: pointer;
         }
 
         &-image{
             width: 60%;
+            cursor: pointer;
         }
-
-
     }
 
 }
 
 /* -------------------------- */
-
-
-/* EXPERTS */
-.experts{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-    width: 80%;
-
-    &-card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: $white;
-        color:$stone-gray;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        width: 30%;
-        height: 100%;
-        margin: 1rem auto;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-        
-
-        &:hover{
-        transform: translateY(-5px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-        }
-
-         @media(max-width: 768px){
-            width:100%;
-            height:100%;
-    }
-
-    &-expert{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        text-align: center;
-
-        &-icon{
-            width: 50%;
-            border-radius:100% ;
-            position: absolute;
-            top: 0;
-        }   
-
-        &-text{
-            margin-top: 7rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-
-        & > span{
-            font-size: $font-size-xl;
-            color: $earth-brown;
-            font-weight: bold;
-        }
-    
-        & > ul > li {
-            padding: .3rem;
-            color: $earth-brown;
-            font-size: $font-size-lg
-        }
-            
-        }   
-
-        
-
-       
-    }
-
-     
-    }
-}
-
-
-/* -------------------------- */
-
 
 /* QUESTİONS */
 .question-card{
@@ -236,14 +272,14 @@ h3{
             padding: 30px;
             border-radius: 10px;
             height: 100%;
-            color: $stone-gray;
+            color: $text-color;
             & div{
                 display:flex;
                 flex-direction: column;
                 margin-bottom: 15px;
 
                 & > label{
-                    color: $earth-brown;
+                    color: $text-color;
                     font-weight: 500;
                 }
 
@@ -336,7 +372,7 @@ h3{
 }
 
 .faqs-question-number{
-    color:$rust-orange;
+    color:$primary;
     font-size: $font-size-lg;
 }
 
@@ -344,13 +380,13 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: $earth-brown;
+    color: $text-color;
     font-weight: 500;
     
 }
 
 .faqs-answer{
-    color: #333;
+    color: $text-color;
     font-size: 1.1rem;
     padding-top: .5rem;
     padding-left: .3rem;
@@ -369,8 +405,8 @@ h3{
     position: relative;
     display: flex;
     justify-content: center;
-    height: 100px;
-    background-color: $sage-green;
+    height: 70px;
+    background-color: $text-color;
     color: $white;
     font-size: $font-size-base;
 
@@ -411,3 +447,4 @@ h3{
 
 
 /* -------------------------- */
+

@@ -7,6 +7,7 @@ import Question from '../../components/Question'
 import Faqs from '../../components/Faqs'
 import Footer from '../../components/Footer'
 import Sidebar from '../../components/Sidebar'
+import Hizmetler from '../../components/Hizmetler'
 
 
 function HomePage() {
@@ -16,7 +17,7 @@ function HomePage() {
     <Navbar/>
     <Sidebar/>
     <Home/>
-    <Options/>
+    <Hizmetler/>
     <Experts/>
     <Question/>
     <Faqs/>
