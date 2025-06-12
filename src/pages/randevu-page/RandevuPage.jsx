@@ -11,7 +11,7 @@ function RandevuPage() {
     <Navbar/>
     <Sidebar/>
     <Randevu/>
-    <Faqs/>
+    {/* <Faqs/> */}
     <Footer/>
     </>
   )
