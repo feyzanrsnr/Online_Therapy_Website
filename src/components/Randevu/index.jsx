@@ -65,7 +65,7 @@ function index() {
   
     
   return (
-    <section style={{backgroundColor:'#fff', margin:'0'}} className='section'>
+    <section style={{backgroundColor:'#bd9a5f', margin:'0'}} className='section'>
     
     <div className='formContainer'>
 
