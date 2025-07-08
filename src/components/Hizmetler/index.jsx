@@ -34,6 +34,24 @@ function index() {
                 </p>
                
             </div>
+
+            <div className='hizmetler-card' >
+              
+                <p className='hizmetler-card-title'>
+                 Oyun Danışmanlığı
+                </p>
+               
+            </div>
+
+            <div className='hizmetler-card' >
+              
+                <p className='hizmetler-card-title'>
+                 Cinsel Terapi
+                </p>
+               
+            </div>
+
+           
             
         </div>
     </section>

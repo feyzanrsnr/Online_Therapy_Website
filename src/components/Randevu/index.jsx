@@ -117,8 +117,8 @@ function index() {
               <label htmlFor="expert">Randevu Almak istediğiniz Uzman</label>
               <Field as="select" name="expert" className="select-input">
                 <option value="">Uzman Seçiniz</option>
-                <option value="Süeda İnan">Süeda İnan</option>
-                <option value="Hümeyra Büşra Nalci">Hümeyra Büşra Nalci</option>
+                <option value="Süeda İnan">Uzman 1</option>
+                <option value="Hümeyra Büşra Nalci">Uzman 2</option>
               </Field>
               <ErrorMessage name="expert" component="div" className="error" />
 

@@ -33,9 +33,9 @@ function index() {
           <div className='navbar-container'>
                 <Link to='/' className='button button-oval'>Anasayfa</Link>
                 <Link to='/randevu' className='button button-oval'>Randevu Al</Link>
-                <Link className='button button-oval'>Uzmanımı Bul
+                <Link className='button button-oval'>Hakkımızda
                 </Link>
-                <Link className='button button-oval'>Bana Uygun Destek Türünü Bul</Link>
+                <Link className='button button-oval'>İletişim</Link>
                 <ScrollLink to='#question' className='button button-oval'>Soru Sor</ScrollLink>
           </div>
         
