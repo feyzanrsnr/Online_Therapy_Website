@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router'
 import { Link as ScrollLink } from 'react-scroll';
-import { FaInstagram } from 'react-icons/fa'
 
 
 
@@ -36,7 +35,7 @@ function index() {
                 <Link className='button button-oval'>Hakkımızda
                 </Link>
                 <Link className='button button-oval'>İletişim</Link>
-                <ScrollLink to='#question' className='button button-oval'>Soru Sor</ScrollLink>
+                <ScrollLink to='question' className='button button-oval'>Soru Sor</ScrollLink>
           </div>
         
         
