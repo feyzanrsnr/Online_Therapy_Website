@@ -32,16 +32,19 @@ function index() {
       to="/randevu">
         Randevu Al
     </Link>
-      
-    <Link className='button' 
-      to="">
-        Uzmanımı Bul
-    </Link>
 
-    <Link className='button' 
-      to="">
-        Bana Uygun Destek Türünü Bul
+    <Link
+      className='button' 
+      to="/randevu">
+        Hakkımızda
     </Link>
+      
+    <Link
+      className='button' 
+      to="/randevu">
+        İletişim
+    </Link>
+    
 
     </div>
      
